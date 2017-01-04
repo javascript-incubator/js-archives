@@ -14,7 +14,7 @@ _r.value('THROTTLE_MILLISECONDS', 1000)
         function($rootScope, $window, $interval, THROTTLE_MILLISECONDS) {
             return {
                 scope: {
-                    infiniteScroll: '&',
+                    infiniteScroll: '=',
                     infiniteScrollContainer: '=',
                     infiniteScrollDistance: '=',
                     infiniteScrollDisabled: '=',
