@@ -8,7 +8,6 @@
 
 #### Coming Soon
 
-* SemVer Versioning
 * Minified Js
 * ES6 support
 
