@@ -1,14 +1,14 @@
 {
   "env": {
     "test": {
-      "presets": [
-        "babel-preset-react"
-      ],
       "plugins": [
         "transform-es2015-modules-commonjs",
         "transform-es2015-spread",
         "transform-class-properties",
         "transform-object-rest-spread"
+      ],
+      "presets": [
+        "babel-preset-react"
       ]
     },
     "cjs": {
