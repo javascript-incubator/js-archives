@@ -1,5 +1,8 @@
 #  Indra
 
+[![Build Status](https://travis-ci.org/rajatsharma305/indra.svg?branch=master)](https://travis-ci.org/rajatsharma305/indra)
+[![Coverage Status](https://coveralls.io/repos/github/rajatsharma305/indra/badge.svg?branch=master)](https://coveralls.io/github/rajatsharma305/indra?branch=master)
+
 _<h3>Simple Mutable State Container<h3>_
 
 
