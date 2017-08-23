@@ -40,12 +40,12 @@ Indra is useful when you want to use react/redux with javascript libraries which
 
 ```javascript
 // ...Other imports
-import { IndraStoreFactory, IndraProvider, withIndraConnect } from 'indra'
+import { indraStoreFactory, IndraProvider, withIndraConnect } from 'indra'
 
 const Passthrough = ({ name }) => <h1>Hello! this is {name}</h1>
 // Component using the indra Store
 
-const Container = ({ indraStore }) => <Passthrough name={indraStore.getindraStore().name} />
+const Container = ({ indraStore }) => <Passthrough name={indraStore.getIndraStore().name} />
 // Container which will pass props from indraStore to it's Children
 
 const ContainerWithIndraConnect = withIndraConnect(Container)
