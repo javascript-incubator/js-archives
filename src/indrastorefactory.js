@@ -3,7 +3,7 @@ const IndraStoreFactory = (initialStore = {}) => {
   const listeners = []
 
   const setIndraStore = arg => {
-    IndraStore = { ...initialStore, ...arg }
+    IndraStore = { ...IndraStore, ...arg }
     listeners.forEach(l => l())
   }
 

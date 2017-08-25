@@ -32,11 +32,14 @@ Now we can use these services in our components locally and all the connected co
 
 Indra is useful when you want to use react/redux with javascript libraries which does DOM manipulation, Indra separates the DOM manipulation and mutable state from the redux store keeping your redux part of your application free from mutations.
 
-#### Installation and Usage
+### Installation and Usage
 
 `npm install --save indra`
 
 **API is under development and still unstable please don't use in any production projects**
+
+##### _Creating Indra Store_
+
 
 ```javascript
 // ...Other imports
@@ -69,3 +72,43 @@ ReactDOM.render(<App/> , document.getElementById('root'))
 
 This will result in
 <h1>Hello! this is Indra</h1>
+
+##### _Mutating Indra Store_
+
+```javascript
+
+const Passthrough = ({ name }) => <h1>Hello! this is {name}</h1>
+
+const Container = ({ indraStore }) => <Passthrough name={indraStore.getIndraStore().name} />
+
+const ContainerWithIndraConnect = withIndraConnect(Container)
+
+const testIndraStore = indraStoreFactory({ test: null })
+
+const tree = TestUtils.renderIntoDocument(
+  <IndraProvider indraStore={testIndraStore}>
+    <div>
+      <ContainerWithIndraConnect pass="through" />
+    </div>
+  </IndraProvider>
+)
+
+//Mutate without setIndraStore will not update connected components
+testIndraStore.getIndraStore().test = 'Indra'
+
+```
+
+##### _Mutating Indra Store and Updating Connected Components_
+
+```javascript
+
+//Mutate with setIndraStore will update all connected components
+testIndraStore.setIndraStore({ test: 'Indra' })
+// or
+testIndraStore.getIndraStore().test = 'Indra'
+testIndraStore.setIndraStore()
+
+```
+The above Code will update all connected components with new indraStore
+
+**It is advised to not to use `testIndraStore.setIndraStore` as much as possible, if you want your components to be updated use redux for that**
