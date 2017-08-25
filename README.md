@@ -112,3 +112,6 @@ testIndraStore.setIndraStore()
 The above Code will update all connected components with new indraStore
 
 **It is advised to not to use `testIndraStore.setIndraStore` as much as possible, if you want your components to be updated use redux for that**
+
+
+Built with [⚔️ Crossgear](https://github.com/rajatsharma305/crossgear)
