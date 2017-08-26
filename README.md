@@ -45,4 +45,4 @@ Please note that this repository is up to date with latest ArcGIS Server version
 
 Forked from [Esri/arcgis-to-geojson-utils](https://github.com/Esri/arcgis-to-geojson-utils)
 
-Built with [⚔️ Crossgear](https://github.com/rajatsharma305/crossgear)
+Cross Platform builds by [⚔️ Crossgear](https://github.com/rajatsharma305/crossgear)
