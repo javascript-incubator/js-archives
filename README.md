@@ -44,3 +44,5 @@ esriUtils.arcgisToGeoJSON(/* ... */);
 Please note that this repository is up to date with latest ArcGIS Server version at the time of fork please look up original repository for latest updates.
 
 Forked from [Esri/arcgis-to-geojson-utils](https://github.com/Esri/arcgis-to-geojson-utils)
+
+Built with [⚔️ Crossgear](https://github.com/rajatsharma305/crossgear)
