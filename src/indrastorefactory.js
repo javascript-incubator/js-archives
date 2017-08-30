@@ -1,6 +1,6 @@
 const IndraStoreFactory = (initialStore = {}) => {
   let IndraStore = initialStore
-  const listeners = []
+  let listeners = []
 
   const setIndraStore = arg => {
     IndraStore = { ...IndraStore, ...arg }
@@ -12,7 +12,7 @@ const IndraStoreFactory = (initialStore = {}) => {
   const subscribe = listener => {
     listeners.push(listener)
     return () => {
-      listeners.filter(l => l !== listener)
+      listeners = listeners.filter(l => l !== listener)
     }
   }
 

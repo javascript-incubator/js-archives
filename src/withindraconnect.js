@@ -6,6 +6,8 @@ const withIndraConnect = IndraConnectee => class IndraConnector extends Componen
     indraStore: PT.object
   }
 
+  static displayName = `IndraConnect(${IndraConnectee.displayName || IndraConnectee.name || 'Component'})`
+
   componentDidMount () {
     const { indraStore } = this.context
     this.unsubscribe = indraStore.subscribe(() => this.forceUpdate())
