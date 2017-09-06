@@ -53,7 +53,7 @@ Delayed Component rendering, well this
   )
 ```
 
-##### Action Dispatching
+###### Action Dispatching
 
 ```javascript
   delayer([
