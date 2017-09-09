@@ -1,6 +1,6 @@
 {
-  "name": "delayer",
-  "version": "0.1.2",
+  "name": "react-delayer",
+  "version": "0.1.0",
   "description": "React Component with delayed prop support",
   "main": "cjs/index.js",
   "browser": "dist/asynccomponent.min.js",

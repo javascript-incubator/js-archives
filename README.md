@@ -1,6 +1,7 @@
-#  delayer 🐢
+#  react-delayer 🐢
 
-Delayed Component Rendering, with support for code-splitting and Promise resolution
+A General Purpose Promise based Delayed Renderer for the React Components.
+_As they say it's a Higher Order Component_
 
 #### Features
 
@@ -62,7 +63,7 @@ Delayed Component rendering, well this
     () => getArtists()
   ],
     (artworks) => dispatch({ type:'GOTARTWORKS', data: artworks}),
-    (sagas) => dispatch({ type:'GOTARTISTS', data: artworks})
+    (artists) => dispatch({ type:'GOTARTISTS', data: artists})
   )
 ```
 
