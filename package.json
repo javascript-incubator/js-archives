@@ -41,7 +41,7 @@
   ],
   "author": "Rajat Sharma (rajatsharma0720@gmail.com)",
   "license": "MIT",
-  "repository": "rajatsharma305/async-component",
+  "repository": "rajatsharma305/react-delayer",
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-eslint": "^7.2.3",
