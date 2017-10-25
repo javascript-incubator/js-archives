@@ -45,10 +45,12 @@ export default function persistState(paths, config) {
     let finalInitialState
 
     try {
-      persistedState = deserialize(localStorage.getItem(key))
+      persistedState = localStorage && deserialize(localStorage.getItem(key))
       finalInitialState = merge(initialState, persistedState)
     } catch (e) {
-      console.warn('Failed to retrieve initialize state from localStorage:', e)
+      // Maybe Server side rendering is happening on this server, who knows
+      // Atleast this will not log like a maniac that `localStorage is undefined`
+      // It's server side script obviously its undefined, stop logging
     }
 
     const store = next(reducer, finalInitialState, enhancer)
