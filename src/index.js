@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const delayer = (loaderPromises, ...thunks) => class AsyncComponent extends Component {
+const delayer = (loaderPromises, ...thunks) => DefaultComponent => class AsyncComponent extends Component {
   static Component = null
 
   state = { Component: AsyncComponent.Component }
@@ -20,7 +20,8 @@ const delayer = (loaderPromises, ...thunks) => class AsyncComponent extends Comp
     if (Component) {
       return <Component {...this.props} />
     }
-    return null
+    if (DefaultComponent) return <DefaultComponent />
+    return <div />
   }
 }
 

@@ -15,7 +15,7 @@ Delayed Component rendering, well this
     ],
       (reducer) => injectReducer(store, { key: 'home', reducer }), // -] data received 1st after promise resolution
       (sagas) => injectSagas(store, sagas) // -] data received 2nd after promise resolution
-    )
+    )(DefaultComponent /* Component to render before real component is loaded or failed*/)
 ```
 
 ##### Explanation
@@ -34,7 +34,7 @@ Delayed Component rendering, well this
   ], // Component will be rendered after resolution of all promises
     (dataOne) => useData(dataOne),
     (dataTwo) => useData(dataTwo)
-)
+)(DefaultComponent /* Component to render before real component is loaded or failed*/)
 
 ```
 
@@ -51,7 +51,7 @@ Delayed Component rendering, well this
   ],
     (reducer) => injectReducer(store, { key: 'home', reducer }),
     (sagas) => injectSagas(store, sagas)
-  )
+  )(DefaultComponent /* Component to render before real component is loaded or failed*/)
 ```
 
 ###### Action Dispatching
@@ -64,7 +64,7 @@ Delayed Component rendering, well this
   ],
     (artworks) => dispatch({ type:'GOTARTWORKS', data: artworks}),
     (artists) => dispatch({ type:'GOTARTISTS', data: artists})
-  )
+  )(DefaultComponent /* Component to render before real component is loaded or failed*/)
 ```
 
 
