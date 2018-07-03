@@ -3,7 +3,9 @@
   "version": "0.1.0-alpha-1",
   "description": "Hypergraph Express Middleware",
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "ENV=prod node builder.js"
   },
@@ -14,7 +16,8 @@
     "deepmerge": "^2.1.1",
     "graphql": "^0.13.2",
     "graphql-playground-middleware-express": "^1.7.0",
-    "graphql-tools": "^3.0.2"
+    "graphql-tools": "^3.0.2",
+    "merge-graphql-schemas": "^1.5.2"
   },
   "devDependencies": {
     "@lectro/coderipper": "^1.0.0"
