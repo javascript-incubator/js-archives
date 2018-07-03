@@ -1,11 +1,9 @@
 {
   "name": "@gql-tools/hypergraph-express-middleware",
-  "version": "0.1.0-alpha-1",
+  "version": "0.1.0-alpha-2",
   "description": "Hypergraph Express Middleware",
   "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
     "build": "ENV=prod node builder.js"
   },
