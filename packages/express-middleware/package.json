@@ -1,13 +1,13 @@
 {
-  "name": "@hypergraph/express-middleware",
-  "version": "0.1.0",
+  "name": "@gql-tools/hypergraph-express-middleware",
+  "version": "0.1.0-alpha-1",
   "description": "Hypergraph Express Middleware",
   "main": "lib/index.js",
   "files": ["lib"],
   "scripts": {
     "build": "ENV=prod node builder.js"
   },
-  "author": "Cunning Code",
+  "author": "Rajat Sharma",
   "license": "MIT",
   "dependencies": {
     "apollo-server-express": "^1.3.6",
