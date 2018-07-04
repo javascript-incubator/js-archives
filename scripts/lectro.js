@@ -12,7 +12,7 @@ const Asynchroniser = new Lectro('node');
 module.exports = Asynchroniser.use(EnhancerCommonutils)
   .use(EnhancerBuildutils)
   .extend(config => {
-    config.plugins.push(new WebpackBar({ name: 'Asynchroniser' }));
+    config.plugins.push(new WebpackBar({ name: 'Generator' }));
     return config;
   })
   .tap(config => {

@@ -1,27 +1,27 @@
-import Express from 'express';
-import compression from 'compression';
-import bodyParser from 'body-parser';
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import App from './app';
+import fs from 'fs';
+import path from 'path';
+import express from 'express';
+import { ServerStyleSheet } from '@elementary/components';
 
-import routes from './routes';
-import serverConfig from './config';
-import responseFactory from './factories/response';
+const SSH = new ServerStyleSheet();
+const app = express();
 
-// Initialize the Express App
-const app = new Express();
+const statichtml =
+  ReactDOMServer.renderToString(SSH.collectStyles(<App />)) +
+  SSH.getStyleTags();
 
-// Apply body Parser and server public assets and routes
-app.use(compression());
-app.use(bodyParser.json({ limit: '20mb' }));
-app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
-responseFactory(app).use(routes);
+fs.writeFileSync(
+  path.resolve(__dirname, '..', 'public/index.html'),
+  statichtml,
+  'utf8',
+);
 
-// start app
-app.listen(serverConfig.port, error => {
-  if (error) {
-    console.log('Something Went Wrong');
-    return;
-  }
-  console.log(`Server running at ${serverConfig.port}`);
+app.use(express.static(path.resolve(__dirname, '..', 'public')));
+
+app.listen(3303, 'localhost', err => {
+  if (err) console.log('Error in serving');
+  console.log('Serving on 3303');
 });
-
-export default app;
