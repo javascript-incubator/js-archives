@@ -15,7 +15,8 @@ _Fastest way to create Graphql Server with Express_
 ```js
 import { middleware } from ' @gql-tools/hypergraph-express-middleware';
 
-app.use('/graphql', middleware);
+const context = { dbConnection, otherGlobals };
+app.use('/graphql', middleware(context));
 ```
 
 - Now place your Resolvers in `graphs/resolvers.js`.
