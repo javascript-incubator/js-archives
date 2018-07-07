@@ -6,7 +6,7 @@
   "files": ["lib"],
   "scripts": {
     "build": "ENV=prod node builder.js",
-    "release": "release-it"
+    "release": "release-it minor --preRelease=alpha"
   },
   "author": "Rajat Sharma",
   "license": "MIT",
