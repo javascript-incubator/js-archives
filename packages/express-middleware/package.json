@@ -1,17 +1,18 @@
 {
   "name": "@gql-tools/hypergraph-express-middleware",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0-alpha.4",
   "description": "Hypergraph Express Middleware",
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "ENV=prod node builder.js",
     "release": "release-it minor --preRelease=alpha"
   },
   "author": "Rajat Sharma",
   "license": "MIT",
-  "homepage":
-    "https://github.com/rajatsharma305/gql-tools/tree/master/packages/express-middleware#hypergraph-express-middleware",
+  "homepage": "https://github.com/rajatsharma305/gql-tools/tree/master/packages/express-middleware#hypergraph-express-middleware",
   "dependencies": {
     "apollo-server-express": "^1.3.6",
     "deepmerge": "^2.1.1",
