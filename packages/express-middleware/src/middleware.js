@@ -17,9 +17,30 @@ const typesArray = fileLoader(path.resolve(rootDir, conf.types), {
 });
 
 /* eslint-disable import/no-dynamic-require */
-module.exports = graphqlExpress({
-  schema: makeExecutableSchema({
-    typeDefs: mergeTypes(typesArray, { all: true }),
-    resolvers: require(path.resolve(rootDir, conf.resolver)),
-  }),
-});
+const resolveResolver = () => {
+  const resolversPath = path.resolve(rootDir, conf.resolver);
+  if (process.env.NODE_ENV === 'development')
+    delete require.cache[resolversPath];
+  return require(resolversPath);
+};
+
+module.exports =
+  process.env.NODE_ENV === 'development'
+    ? (context, options) => (req, res, next) =>
+        graphqlExpress({
+          schema: makeExecutableSchema({
+            typeDefs: mergeTypes(typesArray, { all: true }),
+            resolvers: resolveResolver(),
+          }),
+          context,
+          ...options,
+        })(req, res, next)
+    : (context, options) =>
+        graphqlExpress({
+          schema: makeExecutableSchema({
+            typeDefs: mergeTypes(typesArray, { all: true }),
+            resolvers: resolveResolver(),
+          }),
+          context,
+          ...options,
+        });
