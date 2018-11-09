@@ -7,24 +7,35 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@lectro/core": "^1.1.2-alpha-21",
+    "@lectro/enhancer-buildutils": "^0.1.0-alpha-7",
     "babel-eslint": "^8.1.2",
     "eslint": "4.18.2",
     "eslint-config-airbnb-base": "12.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.6.0",
-    "prettier": "^1.13.2",
-    "@lectro/core": "^1.1.2-alpha-21"
+    "prettier": "^1.13.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rajatsharma305/itms.git"
   },
-  "keywords": ["repos", "js", "eslint", "prettier", "editorconfig"],
+  "keywords": [
+    "repos",
+    "js",
+    "eslint",
+    "prettier",
+    "editorconfig"
+  ],
   "author": "Rajat Sharma",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rajatsharma305/itms/issues"
   },
-  "homepage": "https://github.com/rajatsharma305/itms#readme"
+  "homepage": "https://github.com/rajatsharma305/itms#readme",
+  "dependencies": {
+    "ipfs": "^0.33.1",
+    "json-loader": "^0.5.7"
+  }
 }
