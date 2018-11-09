@@ -13,7 +13,8 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.6.0",
-    "prettier": "^1.13.2"
+    "prettier": "^1.13.2",
+    "@lectro/core": "^1.1.2-alpha-21"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,5 @@
   "bugs": {
     "url": "https://github.com/rajatsharma305/itms/issues"
   },
-  "homepage": "https://github.com/rajatsharma305/itms#readme",
-  "devDependencies": {
-    "@lectro/core": "^1.1.2-alpha-21"
-  }
+  "homepage": "https://github.com/rajatsharma305/itms#readme"
 }

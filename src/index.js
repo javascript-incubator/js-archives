@@ -7,13 +7,17 @@ function itms(events = {}) {
     return itms({ ...events, [evt]: undefined });
   }
 
+  function emit(evt) {
+    navigator.serviceWorker.controller.postMessage(evt);
+  }
+
   function deploy() {
     navigator.serviceWorker.addEventListener('message', event => {
       events[event.data.message]();
     });
   }
 
-  return { on, off, deploy };
+  return { on, off, deploy, emit };
 }
 
 export default itms;
