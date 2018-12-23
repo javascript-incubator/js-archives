@@ -11,6 +11,11 @@ self.addEventListener('message', function(event) {
       if (client.id === senderID) {
         return;
       }
+
+      if (!event.data.includes('itms-evt')) {
+        return;
+      }
+
       client.postMessage({
         client: senderID,
         message: event.data,

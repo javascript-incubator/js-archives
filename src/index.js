@@ -1,23 +1,18 @@
-function itms(events = {}) {
+function itms() {
+  const events = {};
+
   function on(evt, fn) {
-    return itms({ ...events, [evt]: fn });
-  }
-
-  function off(evt) {
-    return itms({ ...events, [evt]: undefined });
-  }
-
-  function emit(evt) {
-    navigator.serviceWorker.controller.postMessage(evt);
-  }
-
-  function deploy() {
+    events[evt] = fn;
     navigator.serviceWorker.addEventListener('message', event => {
-      events[event.data.message]();
+      events['itms-evt-' + event.data.message]();
     });
   }
 
-  return { on, off, deploy, emit };
+  function emit(evt) {
+    navigator.serviceWorker.controller.postMessage('itms-evt-' + evt);
+  }
+
+  return { on, emit };
 }
 
 export default itms;
