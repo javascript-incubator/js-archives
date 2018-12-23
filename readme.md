@@ -18,18 +18,17 @@ import Itms from 'itms';
 const itms = Itms();
 
 // Add Event Listener
-itms
-  .on('logout', e =>
-    app.setState({
-      login: false,
-    }),
-  )
-  .on('login', e =>
-    app.setState({
-      login: true,
-    }),
-  )
-  .deploy();
+itms.on('logout', e =>
+  app.setState({
+    login: false,
+  }),
+);
+
+itms.on('login', e =>
+  app.setState({
+    login: true,
+  }),
+);
 
 //Emit Events
 itms.emit(this.state.login ? 'logout' : 'login');
