@@ -7,7 +7,7 @@ _Extract Reusable Components from existing React Project._
 - Inside your root folder run this command
 
 ```sh
-$ npx componentify-init components/ReusableComponent -p=@slayre/componentify
+$ npx -p=@slayre/componentify componentify-init components/ReusableComponent
 ```
 - Change the contents of `src/components/ReusableComponent/src/index.js` to import the component you want to extract and export it.
 
