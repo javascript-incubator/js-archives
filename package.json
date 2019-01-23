@@ -1,6 +1,6 @@
 {
   "name": "@slayre/componentify",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Extract Reusable Components from Existing React Project",
   "main": "src/index.js",
   "devDependencies": {
