@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const fs = require('fs-extra');
 const path = require('path');
 
@@ -16,7 +17,7 @@ fs.writeFileSync(
     scripts: {
       build: 'node build.js',
     },
-  }),
+  }, null, 2),
 );
 
 fs.ensureFileSync(path.resolve(process.cwd(), 'src/index.js'));

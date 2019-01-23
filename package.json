@@ -7,6 +7,9 @@
     "@hellpack/eslint": "^0.1.0",
     "prettier": "^1.13.2"
   },
+  "bin": {
+    "componentify-init": "src/cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rajatsharma/componentify.git"
