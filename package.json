@@ -1,24 +1,32 @@
 {
-  "name": "mu2",
+  "name": "@slayre/componentify",
   "version": "1.0.0",
-  "description": "Initiator Repo",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Extract Reusable Components from Existing React Project",
+  "main": "src/index.js",
   "devDependencies": {
     "@hellpack/eslint": "^0.1.0",
     "prettier": "^1.13.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rajatsharma/mu2.git"
+    "url": "git+https://github.com/rajatsharma/componentify.git"
   },
-  "keywords": ["repos", "js", "eslint", "prettier", "editorconfig"],
+  "keywords": [
+    "repos",
+    "js",
+    "eslint",
+    "prettier",
+    "editorconfig"
+  ],
   "author": "Rajat Sharma",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rajatsharma/mu2/issues"
+    "url": "https://github.com/rajatsharma/componentify/issues"
   },
-  "homepage": "https://github.com/rajatsharma/mu2#readme"
+  "homepage": "https://github.com/rajatsharma/componentify#readme",
+  "dependencies": {
+    "@lectro/node": "^0.1.0-alpha.5",
+    "fs-extra": "^7.0.1",
+    "webpack-node-externals": "^1.7.2"
+  }
 }
