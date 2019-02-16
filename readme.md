@@ -58,11 +58,12 @@ function createThunkMiddleware(extraArgument) {
 > After
 
 ```js
+const rightMap = bimap(_ => _);
 function createThunkMiddleware(extraArgument) {
   return ({ dispatch, getState }) => next => action => {
     return (
       iffn(action)
-      |> bimap(_ => _, _action => next(_action))
+      |> rightMap(_action => next(_action)) // Same as, bimap(_ => _, _action => next(_action))
       |> run(dispatch, getState, extraArgument)
     );
   };
