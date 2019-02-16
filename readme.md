@@ -23,7 +23,7 @@ const config = webpack = ({
 getConfig(config) === config(webpack);
 ```
 
-Low Level API
+#### Low Level API
 
 ```js
 const { iffn, bimap, run } = require('runiffn');
@@ -39,3 +39,32 @@ getResult(str => str + ' world! ');
 // => hello world! this is runiffn
 ```
 
+#### Recreate Redux-thunk
+
+> Before
+
+```js
+function createThunkMiddleware(extraArgument) {
+  return ({ dispatch, getState }) => next => action => {
+    if (typeof action === 'function') {
+      return action(dispatch, getState, extraArgument);
+    }
+
+    return next(action);
+  };
+}
+```
+
+> After
+
+```js
+function createThunkMiddleware(extraArgument) {
+  return ({ dispatch, getState }) => next => action => {
+    return (
+      iffn(action)
+      |> bimap(_ => _, _action => next(_action))
+      |> run(dispatch, getState, extraArgument)
+    );
+  };
+}
+```
