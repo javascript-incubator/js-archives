@@ -1,0 +1,19 @@
+{
+  "name": "runiffn",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "enginite": "0.1.0-alpha.6",
+  "devDependencies": {
+    "@enginite/libstarter": "1.0.0-alpha.10"
+  },
+  "dependencies": {
+    "purescript": "0.12.2",
+    "purescript-psa": "0.7.3"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "build": "rm -rf build; node scripts/build.js"
+  }
+}
