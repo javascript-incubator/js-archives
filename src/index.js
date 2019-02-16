@@ -7,8 +7,6 @@ export const iffn = maybeFn =>
 
 export const run = (...args) => either.either(fn => fn(...args))(_ => _);
 
-const runiffn = (maybeFn, ...args) => iffn(maybeFn) |> run(...args);
-
 export const { bimap } = either.bifunctorEither;
 
-export default runiffn;
+export default (maybeFn, ...args) => iffn(maybeFn) |> run(...args);
