@@ -63,7 +63,7 @@ function createThunkMiddleware(extraArgument) {
   return ({ dispatch, getState }) => next => action => {
     return (
       iffn(action)
-      |> rightMap(_action => next(_action)) // Same as, bimap(_ => _, _action => next(_action))
+      |> rightMap(_action => next(_action)) // Same as bimap(_ => _, _action => next(_action))
       |> run(dispatch, getState, extraArgument)
     );
   };
