@@ -1,4 +1,4 @@
-## runiffn
+## thunkify
 
 > Run function with rest args if Function supplied otherwise returns the provided value.
 
@@ -6,9 +6,9 @@
 
 ```js
 
-const runiffn = require('runiffn');
+const thunkify = require('thunkify');
 
-const getConfig = config => runiffn(config, webpack);
+const getConfig = config => thunkify(config, webpack);
 
 const config = {
     // Omiitted for brevity
@@ -26,17 +26,17 @@ getConfig(config) === config(webpack);
 #### Low Level API
 
 ```js
-const { iffn, bimap, run } = require('runiffn');
+const { iffn, bimap, run } = require('thunkify');
 
 const getResult = val = iffn(val)
-  |> bimap(fn => arg => fn(arg) + 'this is runiffn')(str => str + 'this is runiffn')
+  |> bimap(fn => arg => fn(arg) + 'this is thunkify')(str => str + 'this is thunkify')
   |> run('hello');
 
 getResult('world! ');
-// => world! this is runiffn
+// => world! this is thunkify
 
 getResult(str => str + ' world! ');
-// => hello world! this is runiffn
+// => hello world! this is thunkify
 ```
 
 #### Recreate Redux-thunk
