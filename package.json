@@ -16,5 +16,6 @@
   "scripts": {
     "dev": "node scripts/dev.js",
     "build": "rm -rf build; node scripts/build.js"
-  }
+  },
+  "dependencies": {}
 }
