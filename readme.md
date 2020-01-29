@@ -4,9 +4,9 @@ _Template Repo for Yarn2 berry_
 
 ### Features
 
-- 🔌 `pnp` (Read Here)[https://next.yarnpkg.com/features/pnp]
-- 📞`offline-cache` (Read Here)[https://next.yarnpkg.com/features/offline-cache]
-- 0️⃣ `Zero Installs` (Read Here)[https://next.yarnpkg.com/features/zero-installs]
+- 🔌 `pnp` [Read Here](https://next.yarnpkg.com/features/pnp)
+- 📞`offline-cache` [Read Here](https://next.yarnpkg.com/features/offline-cache)
+- 0️⃣ `Zero Installs` [Read Here](https://next.yarnpkg.com/features/zero-installs)
 
 ### Requirements
 
