@@ -1,5 +1,6 @@
 {
-  "name": "pmzine",
+  "name": "hackberry",
+  "private": true,
   "version": "1.0.0",
   "description": "Yarn 2 template repo",
   "main": "lib/index.js",
