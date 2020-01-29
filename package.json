@@ -1,7 +1,7 @@
 {
-  "name": "mu2",
+  "name": "pmzine",
   "version": "1.0.0",
-  "description": "Initiator Repo",
+  "description": "Yarn 2 template repo",
   "main": "lib/index.js",
   "scripts": {
     "test": "ava"
