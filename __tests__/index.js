@@ -1,6 +1,5 @@
-import test from 'ava';
-import I from '../src';
+const I = require('../src');
 
-test('Should log dino', t => {
-  t.is(I(6), 6);
+test('Identity should return its argument', () => {
+  expect(I(1)).toBe(1);
 });
