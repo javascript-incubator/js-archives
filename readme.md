@@ -15,4 +15,4 @@ _Template Repo for Yarn2 berry_
 
 ### Build Status
 
-![](https://github.com/rajatsharma/hackberry/workflows/Test/badge.svg)
+![Testing with Jest](https://github.com/rajatsharma/hackberry/workflows/Testing%20with%20Jest/badge.svg)
