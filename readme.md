@@ -13,6 +13,6 @@ _Template Repo for Yarn2 berry_
 - 📦`node@lts`
 - 🤷🏻‍♂️That's it (The latest version of yarn comes with this repo, and is local)
 
-### Known Bugs
+### Build Status
 
-- https://github.com/yarnpkg/berry/issues/594
+![](https://github.com/rajatsharma/hackberry/workflows/Test/badge.svg)
