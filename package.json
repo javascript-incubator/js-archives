@@ -14,8 +14,8 @@
     "prettier": "^1.16.4"
   },
   "scripts": {
-    "dev": "node scripts/dev.js",
-    "build": "rm -rf build; node scripts/build.js"
+    "dev": "node -e \"require('@enginite/libstarter').dev()\"",
+    "build": "rm -rf build; node -e \"require('@enginite/libstarter').build()\""
   },
   "dependencies": {}
 }
