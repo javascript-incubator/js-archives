@@ -1,0 +1,33 @@
+{
+  "name": "hackberry",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Yarn 2 template repo",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajatsharma/mu2.git"
+  },
+  "keywords": [
+    "repos",
+    "js",
+    "eslint",
+    "prettier",
+    "editorconfig"
+  ],
+  "author": "Rajat Sharma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajatsharma/mu2/issues"
+  },
+  "homepage": "https://github.com/rajatsharma/mu2#readme",
+  "devDependencies": {
+    "eslint": "6.1.0",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "2.18.2",
+    "jest": "^25.1.0"
+  }
+}
