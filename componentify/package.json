@@ -1,0 +1,35 @@
+{
+  "name": "@slayre/componentify",
+  "version": "0.1.0",
+  "description": "Extract Reusable Components from Existing React Project",
+  "main": "src/index.js",
+  "devDependencies": {
+    "@hellpack/eslint": "^0.1.0",
+    "prettier": "^1.13.2"
+  },
+  "bin": {
+    "componentify-init": "src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajatsharma/componentify.git"
+  },
+  "keywords": [
+    "repos",
+    "js",
+    "eslint",
+    "prettier",
+    "editorconfig"
+  ],
+  "author": "Rajat Sharma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajatsharma/componentify/issues"
+  },
+  "homepage": "https://github.com/rajatsharma/componentify#readme",
+  "dependencies": {
+    "@lectro/node": "^0.1.0-alpha.5",
+    "fs-extra": "^7.0.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
