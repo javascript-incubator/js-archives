@@ -1,0 +1,1 @@
+require('@lectro/coderipper/lib');
