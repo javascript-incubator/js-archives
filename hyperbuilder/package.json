@@ -1,0 +1,44 @@
+{
+  "name": "asynchronizer",
+  "version": "0.0.1",
+  "description": "Async Functions with Node and more.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development node index.js",
+    "start:prod": "NODE_ENV=production node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production node scripts/build.js",
+    "deploy": "cross-env node scripts/deploy.js",
+    "flow": "flow"
+  },
+  "author": "Rajat Sharma",
+  "license": "MIT",
+  "devDependencies": {
+    "@lectro/core": "1.1.2-alpha-8",
+    "babel-eslint": "8.2.2",
+    "cross-env": "5.1.0",
+    "eslint": "4.18.2",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-flowtype": "2.45.0",
+    "eslint-plugin-flowtype-errors": "3.3.7",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-prettier": "2.6.0",
+    "flow-bin": "^0.67.1",
+    "prettier": "1.13.2",
+    "webpackbar": "2.6.1"
+  },
+  "dependencies": {
+    "@elementary/components": "0.2.2-alpha-4",
+    "@elementary/proper": "0.2.2",
+    "@lectro/enhancer-buildutils": "0.1.0",
+    "@lectro/enhancer-commonutils": "1.1.2-alpha-7",
+    "body-parser": "1.18.2",
+    "compression": "1.7.1",
+    "express": "4.16.2",
+    "fs-extra": "6.0.1",
+    "gh-pages": "1.1.0",
+    "react": "16.4.1",
+    "react-dom": "16.4.1"
+  }
+}
