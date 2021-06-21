@@ -11,3 +11,4 @@
 - [itms](/itms/README.md)
 - [react-delayer](/react-delayer/README.md)
 - [redux-localstorage](/redux-localstorage/README.md)
+- [thunkify](/thunkify/README.md)
