@@ -1,0 +1,15 @@
+{
+  "name": "rj-infinitescroll",
+  "version": "0.1.0",
+  "authors": [
+    "Rajat <rajatsharma0720@gmail.com>"
+  ],
+  "description": "A Pure latest version of ngInfiniteScroll with Bower style install",
+  "main": "rjinfinitescroll.js",
+  "keywords": [
+    "Infinite",
+    "Scroll"
+  ],
+  "license": "MIT",
+  "homepage": ""
+}
